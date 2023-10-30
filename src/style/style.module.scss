@@ -1,0 +1,132 @@
+@import "./global.scss";
+
+#countdown {
+    @include flex-center;
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        gap: 30px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        letter-spacing: 5px;
+        line-height: 1.1;
+        color: white;
+    }
+
+    .box {
+        width: calc(100% / 5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #636691;
+        max-width: 300px;
+        margin-top: 40px;
+    }
+
+    .box {
+        .value {
+            color: #D94D70;
+        }
+
+        .label {
+            color: #636691;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            margin-top: 18px;
+        }
+    }
+
+    .value {
+        font-size: 70px;
+        font-weight: 700;
+        display: flex;
+        background-color: #34364F;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        width: 140px;
+        position: relative;
+    }
+
+    .value::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        z-index: 2;
+        background-color: black;
+    }
+
+    .footer {
+        display: flex;
+        margin-top: 180px;
+        justify-content: center;
+        gap: 30px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 712px) {
+    #countdown {
+        width: max-content;
+        .content {
+            width: 90%;
+            gap: 5px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            color: white;
+            display: inline-block;
+            width: 80%;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 70px;
+        }
+
+        .box {
+            .value {
+                color: #D94D70;
+            }
+    
+            .label {
+                color: #636691;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 0.4rem;
+                margin-top: 9px;
+            }
+        }
+
+        .value {
+            font-size: 30px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .footer {
+            bottom: 0;
+            gap: 15px;
+
+            .socialIcon {
+                width: 12px;
+            }
+        }
+
+    
+    }
+}
